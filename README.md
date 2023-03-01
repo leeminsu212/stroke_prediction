@@ -1,3 +1,3 @@
-# Stroke prediction
+# 뇌졸중 예측
 
-data from Kaggle https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
+데이터셋 출처 Kaggle https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
