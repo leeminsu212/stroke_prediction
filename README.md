@@ -13,8 +13,8 @@ This dataset have 12 features(7 numerical and 5 categorical) and 5110 rows. Ther
 </div>
 Large proportion of data for people without stroke. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp There is wrong value in the gender column.</br></br></br>
 <div>
-<img src="https://user-images.githubusercontent.com/33173280/224352010-57468e1b-e20f-43e8-aab3-b3c9128db9e7.png" width="320" height="500">
-<img src="https://user-images.githubusercontent.com/33173280/224349406-4bf2b5c6-64a8-440d-b91a-dc27fee9eee1.png" width="560" height="500">
+<img src="https://user-images.githubusercontent.com/33173280/224352010-57468e1b-e20f-43e8-aab3-b3c9128db9e7.png" width="300" height="500">
+<img src="https://user-images.githubusercontent.com/33173280/224349406-4bf2b5c6-64a8-440d-b91a-dc27fee9eee1.png" width="540" height="500">
 </div>
 Use the SelectKBest method from scikit-learn to determine the correlation between each column and the target column(stroke). And print out the heatmap for some of top columns.
 </br></br></br>
