@@ -29,7 +29,7 @@ Boxplot showing outlier in age column and avg_glucose_level column.
 
 <img src="https://user-images.githubusercontent.com/33173280/224523924-2068fe2a-90cd-4c65-90de-cb8bf76247bf.png" width="820" height="400">
 Comparison of age groups between people with and without stroke. Most of the people with stroke are older people.
-</br></br></br>
 
-<img src="https://user-images.githubusercontent.com/33173280/224528054-3deea8c5-9136-4e2e-9f85-73632c564cf8.png" width="820" height="400">
+## 3. Data analysis
+Use three classifier(Decision tree classifier, Random forest classifier, K-neighbors classifier). 
 
