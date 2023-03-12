@@ -31,5 +31,15 @@ Boxplot showing outlier in age column and avg_glucose_level column.
 Comparison of age groups between people with and without stroke. Most of the people with stroke are older people.
 
 ## 3. Data analysis
-Use three classifier(Decision tree classifier, Random forest classifier, K-neighbors classifier). 
+<img src="https://user-images.githubusercontent.com/33173280/224543810-0dbce6cf-79b3-466a-967e-35e725079bd5.png" width="700" height="400">
 
+Use three classifiers(**Decision tree classifier**, **Random forest classifier**, **K-neighbors classifier**) for stroke prediction.</br>
+For each classifier, make combinations using 2 encoders(**Label encoder**, **OneHot encoder**) and 4 scalers(**Standard scaler**, **Robust scaler**, **MaxAbs scaler**, **MinMax scaler**). Then compare them to choose the best encoder and scaler for each classifier. 
+</br></br></br>
+
+<img src="https://user-images.githubusercontent.com/33173280/224544832-e9d94a86-13bc-4f18-a7c8-44f4f5e24b93.png" width="700" height="450">
+<img src="https://user-images.githubusercontent.com/33173280/224544907-f52ea9d9-eed4-4e0e-8812-410314f9f73b.png" width="700" height="450">
+<img src="https://user-images.githubusercontent.com/33173280/224544921-220f6e49-bd98-4cd0-ab7a-fd8464d6946e.png" width="700" height="450">
+
+Use K-fold validation(k=5) to compare accuracy of each model.</br>
+K-neighbors classifier's accuracy is the best(0.949 on test set). However, looking at the confusion matrix, it did not predict correctly for data that stroke=1(with stroke). I think it is because of the number of data with stroke is too small compared to the number of data without stroke.
