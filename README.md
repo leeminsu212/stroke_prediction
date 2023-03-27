@@ -34,7 +34,7 @@ Comparison of age groups between people with and without stroke. Most of the peo
 <img src="https://user-images.githubusercontent.com/33173280/224543810-0dbce6cf-79b3-466a-967e-35e725079bd5.png" width="700" height="400">
 
 Use three classifiers(**Decision tree classifier**, **Random forest classifier**, **K-neighbors classifier**) for stroke prediction.</br>
-For each classifier, make combinations using 2 encoders(**Label encoder**, **OneHot encoder**) and 4 scalers(**Standard scaler**, **Robust scaler**, **MaxAbs scaler**, **MinMax scaler**). Then compare them to choose the best encoder and scaler for each classifier. 
+For each classifier, make combinations using 2 encoders(**Label encoder**, **Ordinal encoder**, **OneHot encoder**) and 4 scalers(**Standard scaler**, **Robust scaler**, **MaxAbs scaler**, **MinMax scaler**). Then compare them to choose the best encoder and scaler for each classifier. 
 </br></br></br>
 
 <img src="https://user-images.githubusercontent.com/33173280/224544832-e9d94a86-13bc-4f18-a7c8-44f4f5e24b93.png" width="700" height="450">
