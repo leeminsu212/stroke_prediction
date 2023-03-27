@@ -93,7 +93,7 @@ print("")
 print("####After drop null####")
 print(dataset.isnull().sum())
 
-dataset = dataset.drop(['id', 'hypertension'], axis=1)
+dataset = dataset.drop(['id'], axis=1)
 print("")
 print("####After drop unnecessary columns####")
 print(dataset.info())
@@ -272,7 +272,7 @@ def evaluation(x, y, classifier):
 
 # user can select classifier, encoder and scaler to make combination
 listClassifier=[DecisionTreeClassifier(), RandomForestClassifier(), KNeighborsClassifier()]
-listEncoder=['LabelEncoder', 'OneHotEncoder']
+listEncoder=['LabelEncoder', 'OrdinalEncoder', 'OneHotEncoder']
 listScaler=['StandardScaler', 'RobustScaler', 'MaxAbsScaler', 'MinMaxScaler']
 listBestDf=makeCombination(X, y, listEncoder, listScaler, listClassifier)
 for i in range(len(listBestDf)):
@@ -283,7 +283,7 @@ for i in range(len(listBestDf)):
 # grid dt
 # search max features and max depth
 trainSetX, testSetX, trainSetY, testSetY = train_test_split(listBestDf[0], y, test_size=0.2, shuffle=True, random_state=1)
-param_grid = [{'max_features': np.arange(1, len(testSetX.columns)), 'max_depth': np.arange(1, 20)}]
+param_grid = [{'max_features': np.arange(1, len(testSetX.columns) + 1), 'max_depth': np.arange(1, 20)}]
 dt_gscv = GridSearchCV(listClassifier[0], param_grid, cv=5)
 dt_gscv.fit(trainSetX, trainSetY)
 print(dt_gscv.best_params_)
@@ -292,7 +292,7 @@ print('Best score :', dt_gscv.best_score_)
 # grid rf
 # search max features and max depth
 trainSetX, testSetX, trainSetY, testSetY = train_test_split(listBestDf[1], y, test_size=0.2, shuffle=True, random_state=1)
-param_grid = [{'max_features': np.arange(1, len(testSetX.columns)), 'max_depth': np.arange(1, 10)}]
+param_grid = [{'max_features': np.arange(1, len(testSetX.columns) + 1), 'max_depth': np.arange(1, 10)}]
 rf_gscv = GridSearchCV(listClassifier[1], param_grid, cv=5, n_jobs=-1)
 rf_gscv.fit(trainSetX, trainSetY)
 print(rf_gscv.best_params_)
